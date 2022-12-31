@@ -1,7 +1,35 @@
+body {
+    font-family: 'Noto Sans', 'Noto Sans JP', 'Noto Sans Devanagari', 'Noto Sans Tamil', 'Noto Sans Symbols 2', sans-serif;
+}
+
 .meishi {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
+    --font-size: calc(4vmax * 0.9);
+}
+
+.logo {
+    width: 70%;
+    float: inline-end;
+}
+
+.name {
+    font-size: var(--font-size);
+    text-align: start;
+    justify-items: start;
+}
+
+.title {
+    font-size: calc(var(--font-size) - 0.5em);
+    text-align: start;
+    justify-items: start;
+}
+
+.contact {
+    font-size: calc(var(--font-size) - 1em);
+    text-align: end;
+    justify-items: end;
 }

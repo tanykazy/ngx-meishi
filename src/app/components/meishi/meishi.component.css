@@ -1,0 +1,27 @@
+.card {
+    min-width: 3.5in;
+    min-height: 2in;
+    --ngx-meishi-font-size: 4vmax;
+}
+
+.logo {
+    float: inline-end;
+}
+
+.name {
+    font-size: var(--ngx-meishi-font-size);
+    text-align: start;
+    justify-items: start;
+}
+
+.title {
+    font-size: calc(var(--ngx-meishi-font-size) - 0.5em);
+    text-align: start;
+    justify-items: start;
+}
+
+.contact {
+    font-size: calc(var(--ngx-meishi-font-size) - 1em);
+    text-align: end;
+    justify-items: end;
+}
