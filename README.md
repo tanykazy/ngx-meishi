@@ -10,20 +10,49 @@ Use the package manager [npm](https://nodejs.org/) to install ngx-meishi.
 npm i ngx-meishi
 ```
 
-<!-- ## Usage
+## Usage
 
-```shell
-import foobar
+```typescript
+import { MeishiModule } from 'ngx-meishi';
+```
 
-# returns 'words'
-foobar.pluralize('word')
+```html
+<ngx-meishi 
+    [size]="{
+        width:'350px',
+        height:'200px'}" 
+    [content]="{
+        name:'Full Name', 
+        title:'title', 
+        logo:'example.png', 
+        phone:'123-456-7890', 
+        email:'example@email.com', 
+        web:'www.example.com', 
+        location:'123 Anywhere St.,Any City,ST 12345'}">
+</ngx-meishi>
+```
 
-# returns 'geese'
-foobar.pluralize('goose')
+or
 
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-``` -->
+```html
+<ngx-meishi [size]="{width:'350px', height:'200px'}">
+    <mat-grid-list cols="2" rowHeight="3.5:2">
+        <mat-grid-tile rowspan="2">
+            <img src="example.png" width="100%">
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <p>Full Name</p>
+            <p>Title</p>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <p>123-456-7890</p>
+            <p>example@email.com</p>
+            <p>www.example.com</p>
+            <p>123 Anywhere St.,Any City,ST 12345</p>
+        </mat-grid-tile>
+    </mat-grid-list>
+</ngx-meishi>
+```
 
 ## Contributing
 
