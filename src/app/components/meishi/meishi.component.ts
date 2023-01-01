@@ -1,9 +1,8 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations'
-import { Observable, Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-meishi',
@@ -23,7 +22,7 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
     ])
   ]
 })
-export class MeishiComponent implements OnInit, OnDestroy {
+export class MeishiComponent implements OnInit {
   @Input() rotate: boolean = false;
   @Input() size: { width: string, height: string } = {
     // width: '350px', height: '200px'
@@ -31,17 +30,18 @@ export class MeishiComponent implements OnInit, OnDestroy {
   };
   @Input() content: { name?: string, title?: string, logo?: string, phone?: string, email?: string, web?: string, location?: string } | undefined;
   orientation: 'portrait' | 'landscape' = 'landscape';
-  private destroyed = new Subject<void>();
   private layoutChanges: Observable<BreakpointState>;
 
   constructor(private breakpointObserver: BreakpointObserver) {
     this.layoutChanges = breakpointObserver
-      .observe(Object.values(Breakpoints))
-      .pipe(takeUntil(this.destroyed));
+      .observe([
+        '(orientation: portrait)',
+        '(orientation: landscape)'
+      ]);
   }
 
   ngOnInit(): void {
-    this.layoutChanges.subscribe(result => {
+    this.layoutChanges.subscribe(() => {
       if (this.rotate) {
         if (this.breakpointObserver.isMatched('(orientation: landscape)')) {
           this.orientation = 'landscape';
@@ -49,16 +49,6 @@ export class MeishiComponent implements OnInit, OnDestroy {
           this.orientation = 'portrait';
         }
       }
-      for (const query of Object.keys(result.breakpoints)) {
-        if (result.breakpoints[query]) {
-          console.log(query);
-        }
-      }
     });
-  }
-
-  ngOnDestroy(): void {
-    this.destroyed.next();
-    this.destroyed.complete();
   }
 }

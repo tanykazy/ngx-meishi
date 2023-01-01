@@ -1,22 +1,24 @@
-<mat-card class="card" [ngStyle]="size" [@rotate]="orientation">
-    <ng-container *ngIf="content">
-        <mat-card-header>
-            <mat-card-title-group>
-                <mat-card-title class="name" *ngIf="content.name">{{content.name}}</mat-card-title>
-                <mat-card-subtitle class="title" *ngIf="content.title">{{content.title}}</mat-card-subtitle>
-                <img class="logo" *ngIf="content.logo" mat-card-sm-image [src]="content.logo">
-            </mat-card-title-group>
-        </mat-card-header>
-    </ng-container>
-    <mat-card-content>
+<div class="container">
+    <mat-card class="card" [ngStyle]="size" [@rotate]="orientation">
         <ng-container *ngIf="content">
-            <div class="contact">
-                <p *ngIf="content.phone">{{content.phone}}</p>
-                <p *ngIf="content.email">{{content.email}}</p>
-                <p *ngIf="content.web">{{content.web}}</p>
-                <p *ngIf="content.location">{{content.location}}</p>
-            </div>
+            <mat-card-header>
+                <mat-card-title-group>
+                    <mat-card-title class="name" *ngIf="content.name">{{content.name}}</mat-card-title>
+                    <mat-card-subtitle class="title" *ngIf="content.title">{{content.title}}</mat-card-subtitle>
+                    <img class="logo" *ngIf="content.logo" mat-card-sm-image [src]="content.logo">
+                </mat-card-title-group>
+            </mat-card-header>
         </ng-container>
-        <ng-content></ng-content>
-    </mat-card-content>
-</mat-card>
+        <mat-card-content>
+            <ng-container *ngIf="content">
+                <div class="contact">
+                    <p *ngIf="content.phone">{{content.phone}}</p>
+                    <p *ngIf="content.email">{{content.email}}</p>
+                    <p *ngIf="content.web">{{content.web}}</p>
+                    <p *ngIf="content.location">{{content.location}}</p>
+                </div>
+            </ng-container>
+            <ng-content></ng-content>
+        </mat-card-content>
+    </mat-card>
+</div>
