@@ -1,6 +1,36 @@
-# NgxMeishi
+# ngx-meishi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+ngx-meishi is a Angular component for displaying business cards.
+
+<!-- ## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install foobar
+``` -->
+
+<!-- ## Usage
+
+```shell
+import foobar
+
+# returns 'words'
+foobar.pluralize('word')
+
+# returns 'geese'
+foobar.pluralize('goose')
+
+# returns 'phenomenon'
+foobar.singularize('phenomena')
+``` -->
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
 
 ## Development server
 
