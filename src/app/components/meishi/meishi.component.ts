@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
-  selector: 'app-meishi',
+  selector: 'ngx-meishi',
   templateUrl: './meishi.component.html',
   styleUrls: ['./meishi.component.css'],
   animations: [
