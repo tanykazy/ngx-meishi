@@ -2,13 +2,13 @@
 
 ngx-meishi is a Angular component for displaying business cards.
 
-<!-- ## Installation
+## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [npm](https://nodejs.org/) to install ngx-meishi.
 
 ```bash
-pip install foobar
-``` -->
+npm i ngx-meishi
+```
 
 <!-- ## Usage
 
