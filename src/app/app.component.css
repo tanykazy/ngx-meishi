@@ -8,7 +8,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
-    --font-size: calc(4vmax * 0.9);
+    --font-size: calc(2.25em * 0.9);
 }
 
 .logo {
@@ -17,19 +17,19 @@ body {
 }
 
 .name {
-    font-size: var(--font-size);
+    font-size: calc(var(--font-size) * 0.75);
     text-align: start;
     justify-items: start;
 }
 
 .title {
-    font-size: calc(var(--font-size) - 0.5em);
+    font-size: calc(var(--font-size) * 0.5);
     text-align: start;
     justify-items: start;
 }
 
 .contact {
-    font-size: calc(var(--font-size) - 1em);
+    font-size: calc(var(--font-size) * 0.25);
     text-align: end;
     justify-items: end;
 }
