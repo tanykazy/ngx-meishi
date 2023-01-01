@@ -12,6 +12,7 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
     trigger('rotate', [
       state('landscape',
         style({
+          rotate: '0deg',
         })),
       state('portrait',
         style({
