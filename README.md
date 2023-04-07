@@ -2,6 +2,10 @@
 
 ngx-meishi is a Angular component for displaying business cards.
 
+## Demo
+
+[https://tanykazy.github.io/ngx-meishi/](https://tanykazy.github.io/ngx-meishi/)
+
 ## Installation
 
 Use the package manager [npm](https://nodejs.org/) to install ngx-meishi.
