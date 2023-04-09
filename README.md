@@ -6,6 +6,10 @@ Angular component for displaying business cards
 
 [https://tanykazy.github.io/ngx-meishi/](https://tanykazy.github.io/ngx-meishi/)
 
+## Description
+
+This is an Angular component for displaying business cards. It can be installed using npm and used to display information such as name, title, phone number, email, website, and location. The component can be customized with different sizes and layouts. 
+
 ## Installation
 
 Use the package manager [npm](https://nodejs.org/) to install ngx-meishi.
