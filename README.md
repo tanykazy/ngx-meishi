@@ -1,6 +1,6 @@
 # ngx-meishi
 
-ngx-meishi is a Angular component for displaying business cards.
+Angular component for displaying business cards
 
 ## Demo
 
